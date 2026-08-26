@@ -21,7 +21,7 @@ MetaTrace uses the gson version `2.11.0`
 <dependency>
   <groupId>sh.miles</groupId>
   <artifactId>metatrace</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ maven {
     url = uri("https://maven.miles.sh/snapshots")
 }
 
-implementation("sh.miles:metatrace:1.0.1-SNAPSHOT")
+implementation("sh.miles:metatrace:2.0.0-SNAPSHOT")
 ```
 
 ## Usage
