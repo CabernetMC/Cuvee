@@ -5,16 +5,26 @@ import com.google.gson.GsonBuilder;
 import sh.miles.metatrace.json.manifest.VersionManifestAdapter;
 import sh.miles.metatrace.json.manifest.VersionManifestEntryAdapter;
 import sh.miles.metatrace.json.manifest.VersionManifestLatestAdapter;
+import sh.miles.metatrace.json.rule.VersionRuleAdapter;
+import sh.miles.metatrace.json.rule.VersionRuleOsAdapter;
+import sh.miles.metatrace.json.version.VersionArgumentAdapter;
+import sh.miles.metatrace.json.version.VersionAssetIndexAdapter;
 import sh.miles.metatrace.json.version.VersionDataAdapter;
 import sh.miles.metatrace.json.version.VersionDownloadEntryAdapter;
+import sh.miles.metatrace.json.version.VersionJavaRuntimeAdapter;
 import sh.miles.metatrace.json.version.VersionLibraryAdapter;
 import sh.miles.metatrace.json.version.VersionLibraryArtifactAdapter;
 import sh.miles.metatrace.meta.MinecraftVersion;
 import sh.miles.metatrace.meta.manifest.VersionManifest;
 import sh.miles.metatrace.meta.manifest.VersionManifestEntry;
 import sh.miles.metatrace.meta.manifest.VersionManifestLatest;
+import sh.miles.metatrace.meta.rule.VersionRule;
+import sh.miles.metatrace.meta.rule.VersionRuleOs;
+import sh.miles.metatrace.meta.version.VersionArgument;
+import sh.miles.metatrace.meta.version.VersionAssetIndex;
 import sh.miles.metatrace.meta.version.VersionData;
 import sh.miles.metatrace.meta.version.VersionDownloadEntry;
+import sh.miles.metatrace.meta.version.VersionJavaRuntime;
 import sh.miles.metatrace.meta.version.VersionLibrary;
 import sh.miles.metatrace.meta.version.VersionLibraryArtifact;
 import org.jetbrains.annotations.NotNull;
@@ -38,6 +48,11 @@ public final class MetaTrace {
             .registerTypeAdapter(VersionLibraryArtifact.class, new VersionLibraryArtifactAdapter())
             .registerTypeAdapter(VersionLibrary.class, new VersionLibraryAdapter())
             .registerTypeAdapter(VersionDownloadEntry.class, new VersionDownloadEntryAdapter())
+            .registerTypeAdapter(VersionRuleOs.class, new VersionRuleOsAdapter())
+            .registerTypeAdapter(VersionRule.class, new VersionRuleAdapter())
+            .registerTypeAdapter(VersionArgument.class, new VersionArgumentAdapter())
+            .registerTypeAdapter(VersionAssetIndex.class, new VersionAssetIndexAdapter())
+            .registerTypeAdapter(VersionJavaRuntime.class, new VersionJavaRuntimeAdapter())
             .registerTypeAdapter(VersionData.class, new VersionDataAdapter())
             .create();
     private static final Gson PRETTY_GSON = GSON.newBuilder()
